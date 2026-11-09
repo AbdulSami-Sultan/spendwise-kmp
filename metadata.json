@@ -1,0 +1,7 @@
+{
+  "name": "SpendWise - iOS Daily Expense & Budget Tracker",
+  "description": "A high-fidelity iOS expense tracking and personal budget management app built with Apple Human Interface Guidelines and Kotlin Multiplatform (KMP) shared architecture.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
