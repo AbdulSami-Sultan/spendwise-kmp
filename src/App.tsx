@@ -244,6 +244,16 @@ export default function App() {
             onResetSampleData={handleResetSampleData}
             onClearAllExpenses={handleClearAllExpenses}
             expenses={expenses}
+            categories={categories}
+            onExportSuccess={(count, total) => {
+              setDynamicIslandNotification({
+                id: `noti-export-${Date.now()}`,
+                title: 'CSV File Exported',
+                subtitle: `${count} records ready for accounting`,
+                iconType: 'success',
+                amount: `${KmpBudgetEngine.formatCurrency(total, currency)}`,
+              });
+            }}
           />
         );
       default:
