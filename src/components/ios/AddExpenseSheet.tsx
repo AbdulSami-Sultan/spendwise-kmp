@@ -245,9 +245,9 @@ export const AddExpenseSheet: React.FC<AddExpenseSheetProps> = ({
                     <Camera className="w-5 h-5" />
                   </div>
                   <div>
-                    <div className="text-sm font-semibold">Receipt Attachment</div>
+                    <div className="text-sm font-semibold">Bill & Receipt AI Reader</div>
                     <div className="text-xs text-slate-400 dark:text-neutral-500">
-                      {receiptImage ? 'Receipt attached' : 'Scan paper receipt with OCR'}
+                      {receiptImage ? 'Bill attached' : 'Read bill from image with AI OCR'}
                     </div>
                   </div>
                 </div>

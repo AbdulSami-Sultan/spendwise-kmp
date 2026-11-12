@@ -385,11 +385,14 @@ export default function App() {
         prefillData={prefillExpense}
       />
 
-      {/* Smart Receipt Scanner Modal */}
+      {/* Smart AI Receipt & Bill Scanner Modal */}
       <ReceiptScannerModal
         isOpen={isReceiptScannerOpen}
         onClose={() => setIsReceiptScannerOpen(false)}
         onReceiptScanned={handleReceiptScanned}
+        onDirectAddExpense={handleSaveExpense}
+        categories={categories}
+        currency={currency}
       />
 
       {/* Budget Adjust Modal */}

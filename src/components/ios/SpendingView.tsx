@@ -125,13 +125,13 @@ export const SpendingView: React.FC<SpendingViewProps> = ({
           </h1>
         </div>
 
-        {/* Quick Scan Action */}
+        {/* Quick AI Bill Scan Action */}
         <button
           onClick={onOpenReceiptScanner}
-          className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-200/80 dark:bg-neutral-800 text-xs font-medium text-slate-800 dark:text-neutral-200 hover:bg-slate-300 dark:hover:bg-neutral-700 transition-colors"
+          className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-500/15 dark:bg-emerald-950/40 border border-emerald-500/30 text-xs font-semibold text-emerald-700 dark:text-emerald-300 hover:bg-emerald-500/25 transition-colors shadow-xs"
         >
           <Camera className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-          <span>Scan</span>
+          <span>Read Bill</span>
         </button>
       </div>
 
@@ -191,6 +191,30 @@ export const SpendingView: React.FC<SpendingViewProps> = ({
             </div>
           </div>
         </div>
+      </div>
+
+      {/* AI Bill Reader Quick Action Card */}
+      <div
+        onClick={onOpenReceiptScanner}
+        className="bg-white dark:bg-neutral-900 rounded-2xl p-3.5 border border-emerald-500/30 shadow-xs flex items-center justify-between cursor-pointer hover:border-emerald-500/60 transition-all group select-none"
+      >
+        <div className="flex items-center gap-3">
+          <div className="w-9 h-9 rounded-xl bg-emerald-500/15 dark:bg-emerald-950/50 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+            <Camera className="w-4 h-4 stroke-[2.2]" />
+          </div>
+          <div>
+            <div className="text-xs font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+              <span>Read Bill from Image</span>
+              <span className="text-[10px] font-semibold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/50 px-1.5 py-0.2 rounded">
+                AI Vision
+              </span>
+            </div>
+            <div className="text-[11px] text-slate-500 dark:text-neutral-400">
+              Upload bill photo to auto-extract merchant, total & items
+            </div>
+          </div>
+        </div>
+        <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-emerald-500 group-hover:translate-x-0.5 transition-all shrink-0" />
       </div>
 
       {/* Search & Category Filter Pills */}
