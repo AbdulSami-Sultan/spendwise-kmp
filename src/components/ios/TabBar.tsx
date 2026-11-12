@@ -61,11 +61,11 @@ export const TabBar: React.FC<TabBarProps> = ({
         })}
       </div>
 
-      {/* Floating Quick Action Button on bottom right (ergonomic thumb reach) */}
-      <div className="absolute -top-6 right-5">
+      {/* Floating Quick Action Button positioned cleanly above the tab bar */}
+      <div className="absolute bottom-full mb-3 right-4 pointer-events-none">
         <button
           onClick={onOpenAddExpense}
-          className="w-12 h-12 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white shadow-lg shadow-emerald-600/30 flex items-center justify-center active:scale-95 transition-transform"
+          className="pointer-events-auto w-12 h-12 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white shadow-lg shadow-emerald-600/30 flex items-center justify-center active:scale-95 transition-transform"
           aria-label="Add new expense"
           title="Add Expense"
         >
